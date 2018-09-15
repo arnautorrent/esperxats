@@ -16,13 +16,13 @@ $dbname = "d71md972_wpblog";
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 
-    $stmt = $conn->prepare("CALL consultaResultatCastellDates('2017-01-01','2017-12-31')");
+    $stmt = $conn->prepare("CALL proc_consultaResultatCastell('2017-01-01','2017-12-31')");
     $stmt->execute();
 
     $result = $stmt->fetchAll();
     foreach ($result as $row)
     {
-
+        $asdf = 2;
     }
 
     $conn = null;
